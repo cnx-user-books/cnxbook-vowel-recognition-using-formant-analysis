@@ -1,0 +1,41 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>One Vowel Recognition</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m52110</md:content-id>
+  <md:title>One Vowel Recognition</md:title>
+  <md:abstract/>
+  <md:uuid>a5d05f53-f5a2-448b-8fde-a8e50e5e4706</md:uuid>
+</metadata>
+
+<content>
+  <para id="eip-347">After we gathered information about probabilistic interpretations of speech recognition, we were ready to begin building the project. Starting with the basics, we built a simple program that would take as input a three-second long signal and produce as output a measure of the corresponding formants of the signal. By applying the auto-regressive model, we were able to come up with a reasonable transfer function modeling the speech. However, we encountered a slight problem.
+
+</para><para id="eip-159">If we estimated the transfer function using an auto-regressive model of low order, the associated frequency response would be a little too smooth. I.e., it would perhaps mask some of the peaks of the graph and cost us valuable information in determining the formants. On the other hand, if we used a high-order model, we would get too much variation in the frequency response because of the intricacies of the high-order rational function. We would not be able to tell which peaks were true formants and which peaks were just "overestimation" by our model. This is demonstrated in the figure below for the test speech signal "hat.mat".</para><para id="eip-135"><figure id="fig3"><media id="ar-model" alt="high vs low">
+	   
+  <image mime-type="image/jpeg" src="../../media/ARmodel.jpg"/>
+		 
+</media>
+  
+<caption>Low vs High Order of the Autoregressive Model
+  </caption></figure></para><para id="eip-292">This eventually started to look like an optimization problem, and since none of us had much relevant expertise, we approached it slightly differently. Instead of solving a case-by-case parameter optimization problem with unnecessarily difficult math, we simply abstracted the problem in terms of something we knew - polynomial regression. </para><para id="eip-976">The Taylor series tells us that we can approximate every function as a polynomial, whose order determines its degree of precision. As with the parameter for the AR model, increasing the polynomial approximation's order would result in a high degree of information saved from the signal. Since we were more familiar with Taylor series than machine learning and statistical approximation, we chose to rely more strongly on polynomial regression than the AR model.</para><para id="delete_me">With this in mind, we used MATLAB to solve a generalized least-squares regression problem. In other words, we came up with a solution that is both accurate and precise. We used a high-order (30 order) a.r. model to get the accuracy we needed and a moderate-order(120 order) polynomial regression to get the precision we needed. This is illustrated in figure below for "hat.mat".</para><para id="eip-331"><figure id="fig4"><media id="poly-reg" alt="poly vs auto">
+    <image mime-type="image/jpeg" src="../../media/polyreg.jpg"/>
+  </media>
+  
+<caption>Formant Determination of the Signal when Sujay is Saying the Word 'Hat'
+  </caption></figure></para><para id="eip-381">After using predetermined average vowel formants found on the internet to estimate the formants of the signal, we then implemented a matched-filter which would find the vowel whose theoretical formant values were most similar. Our filter was based on the method of least-squares, so it chose the vowel for which the mean squared difference was smallest. We plotted the measures of the mean-squared differences for hat.mat below. Note that the lower the bar, the more similar the match between the corresponding vowel and the signal.</para><para id="eip-36"><figure id="fig5">
+  <media id="mse-pic" alt="equation">
+    <image mime-type="image/jpeg" src="../../media/mse.jpg"/>
+  </media>
+  <caption>
+    Mean Squared Difference Equation
+  </caption>
+</figure>
+        </para><para id="eip-96"><figure id="fig6"><media id="graph-pic" alt="mean squared graph">
+    <image mime-type="image/jpeg" src="../../media/mse_graph.jpg"/>
+  </media>
+  
+<caption>Measured Mean-Squared Differences of the Signal when Sujay is Saying the Word 'Hat'
+  </caption></figure></para></content>
+
+</document>

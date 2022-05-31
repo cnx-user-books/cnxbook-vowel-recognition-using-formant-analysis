@@ -1,0 +1,38 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Data Collection and Analysis</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m52114</md:content-id>
+  <md:title>Data Collection and Analysis</md:title>
+  <md:abstract/>
+  <md:uuid>436f816b-fbe1-45af-96f9-2c9a9b8c2bac</md:uuid>
+</metadata>
+
+<content>
+  <para id="eip-704"><title>Procedure</title>When we began testing of our program, we knew that we would have to be very clear in conveying its strengths and limitations from the start. Otherwise, users might be tempted to rush and speak incoherently in the excitement to see if the program worked. With this in mind, we gave the following set of instructions to every person who tested our program. First, they needed to speak clearly and slowly, extending their vowels just a little beyond their usual length. Next, they were allowed to add pauses of any gap between the words as long as the pause was noticeable. Most importantly, any consonants they pronounced had to be soft, not hard. In the word "rug," for example, the hard 'g' gets a lot of emphasis and ends up overshadowing the rest of the word (including the vowel). That's why we told them to shift their normal pronunciation of "rug" to a softer "ru-ck." After these precautions were given, the user would say some combination of one-syllable words similar to the ones in our predefined database, waiting to see that the program might recognize this aspect of his voice.</para><para id="eip-977"><title>Results</title>Our program was very successful, ranging from nearly perfect with shorter one-to-three word speeches, to moderately accurate with four-to-six word speeches. To see just how effective the program is, let's run through its capabilities with a test signal. Click <link url="http://goo.gl/91fFlH" window="new">here</link>
+  for a sample of Sujay speaking the words 
+  "see", "hat", "play", "head", "palm" and "rug".
+   Since we anticipated handling both live speech and stored audio files, we run our program with the name of the file as a parameter and wait. Shortly, MATLAB produces the following output. </para><para id="eip-15"><media id="figure-12" alt="sample test pic 3.">
+	   
+  <image mime-type="image/jpeg" src="../../media/output_palm.jpg"/>
+		 
+</media></para><para id="eip-528">At the very least, this tells us that the program can recognize the vowels chronologically. But how can we ensure that the program identified the correct time ranges for the vowels? Along with the text shown, the program also outputs a graph showing where in time it estimates sound content in the original signal. It is shown in the figure below. Interestingly enough, by avoiding the "parsing" approach to this problem, we managed to do an even better job of parsing the signal into its vowels.
+</para><para id="eip-692"><media id="figure-10" alt="sample test pic 1.">
+	   
+  <image mime-type="image/jpeg" src="../../media/figure7.jpg"/>
+		 
+</media></para><para id="eip-658">And, for good measure, a total count of each vowel is displayed to visualize the program output for longer strings of words.</para><para id="eip-832"><media id="figure-11" alt="sample test pic 2.">
+	   
+  <image mime-type="image/jpeg" src="../../media/figure8.jpg"/>
+		 
+</media></para><para id="eip-156"><title>More Data</title>A few more samples of data are shown below for demonstrative purposes.</para><para id="eip-835"><media id="figure12" alt="more data 1.">
+	   
+  <image mime-type="image/jpeg" src="../../media/figure9.jpg"/>
+		 
+</media></para><para id="eip-592"><media id="figure22" alt="more data 2.">
+	   
+  <image mime-type="image/jpeg" src="../../media/figure10.jpg"/>
+		 
+</media></para><para id="eip-531"><title>Data Analysis</title>We found that our project was generally successful, but our data collection showed us some flaws that we did not anticipate. First and foremost, the natural tonal variation in pronunciation made it difficult to determine vowel content. Typically when one says the word "see," they start off with a higher pitch and end with a lower pitch. Since our program works best for monotonous vowel sounds - that is, vowels whose sounds do not vary from one time to the other - it was challenging to succeed without first warning the user to maintain monotone in the course of every vowel. Second, we found that however hard we tried to throw out the effects of consonants on our program, they still appeared, albeit to a small degree. In the formation of the a word beginning with "h", for example, one starts off by slightly parting the lips and blowing air before proceeding to say the rest of the word. If the person is trying to say "hat," he or she would maintain his output of air while stretching his mouth and tightening his vocal cords. If he or she is trying to say "head," he or she opens his or her  mouth vertically while applying similar pressure to his vocal cords. This phenomenon of speech is known as coarticulation. Note that although the end result - the vowel - is different from "head" to "hat", the process of getting there is very similar. That's why our program sometimes mixed up words that start the same, like "head" and "hat", and words that end the same, like "hat" and "strut". Last but not least, we found that the program did not work as well for people with accents or exceptionally deep/high voices. This was a little frustrating, but not unexpected, because even Google and other big companies struggle with this issue regarding its audience.</para></content>
+
+</document>

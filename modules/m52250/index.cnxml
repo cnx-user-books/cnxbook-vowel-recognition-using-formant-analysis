@@ -1,0 +1,28 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Vowel Recognition Overview</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m52250</md:content-id>
+  <md:title>Vowel Recognition Overview</md:title>
+  <md:abstract/>
+  <md:uuid>d842aabf-ab34-401f-86ba-49c897763933</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me"><title>Concept of Vowel Recognition</title>Vowel recognition is an interesting challenge because it applies system theory to our own physiology. Whenever we attempt to speak, the glottis - the part of the larynx containing the vocal cords - starts to vibrate. These vibrations can be modeled as white noise which become audible and coherent sounds as they pass through the vocal tract. Past experiments have repeatedly confirmed that the vocal tract can be treated as a linear, time-invariant system.</para><para id="eip-560">With this, we can proceed in one of three ways: we can model the system as having all zeros (moving average), all poles (autoregressive), or some combination of poles and zeros. Since we can only observe the output of the filter - the speech the escapes the vocal cavity - we choose to model the system as having only poles, because such a model has little dependence on the original input signal. With an autoregressive model, we can generate a transfer function to approximate the filter with a degree of precision proportional to the filter's parameter. It should be noted that a higher order model generally works better but is also more computationally expensive. Once we have the transfer function, we look at the frequency response and determine which frequencies the peaks occur. These frequencies are the formants and we can look at known formant charts to determine which vowel was spoken.</para><para id="eip-881"><title>Identifying Vowel Formants</title>The term formant refers to peaks in the harmonic spectrum of a complex sound. You can see this spectrum by taking a Fourier transform and looking at the frequency response of the signal. Formants in the sound of the human voice are particularly important because they are essential components in the intelligibility of speech. The distinctness of the vowel sounds can be attributed to the differences in their first three formant frequencies. Producing different vowel sounds amounts to returning these formants within a general range of frequencies depending on the particular person.</para><para id="eip-902"><figure id="fig1">
+<media id="freq-graph" alt="Ah frequency response">
+    <image mime-type="image/jpeg" src="../../media/examplefreq.jpg"/>
+  </media>
+  <caption>
+   Formants of an 'Ah' Sound (Adopted from HyperPhysics)
+  
+  </caption>
+</figure>
+        </para><para id="eip-506">From the frequency response of the vowel formants, we can look at how the peaks of the frequency in the harmonic spectrum line up with the corresponding dark lines in the spectrogram. The dark areas are where the formants are and the graph show them at the same frequency.</para><para id="eip-511"><figure id="fig2"><media id="ah_sound" alt="specgram of ah sound">
+    <image mime-type="image/jpeg" src="../../media/Spec_Ah_Sound.jpg"/>
+  </media>
+  
+<caption>Spectrogram of the 'Ah' Sound
+  </caption></figure></para></content>
+
+</document>

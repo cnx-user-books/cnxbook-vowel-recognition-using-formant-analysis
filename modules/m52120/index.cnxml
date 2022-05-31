@@ -1,0 +1,14 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Instructions for Usage</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m52120</md:content-id>
+  <md:title>Instructions for Usage</md:title>
+  <md:abstract/>
+  <md:uuid>506b8782-bf81-4a6c-ae38-767c6372f625</md:uuid>
+</metadata>
+
+<content>
+  <para id="eip-746">1. Download the file  <link url="http://goo.gl/mgyqkp" window="new">here</link> and unzip the files to a directory of your choice.</para><para id="eip-583">2. Modify lines 34 and line 41 in main\_program.m to reflect the desired directory for data and the current directory, respectively.</para><para id="delete_me">3. Open MATLAB and change MATLAB's working directory to wherever you unzipped the files. If you wish to test the program with live audio, run main_program and follow the instructions. If you wish to test the program with prerecorded audio, run  Elec301spectrogram_loadfile(parameter), where parameter is the name of your matlab .m audio file in single quotes and without the extension. The audio file must be contained in the same folder as the program's files.</para><para id="eip-560">4. Follow the on-screen instructions. Make sure to speak slowly and clearly, with monotonous vowels and distinct pauses between each word.</para><para id="eip-35">5. Let the program work its magic! For loaded audio, the full output will be displayed on the console. For live audio, the full output will be available as a pdf file in a child of the data directory that is unique to your run of the program!</para></content>
+
+</document>

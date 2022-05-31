@@ -1,0 +1,15 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m52107</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:abstract/>
+  <md:uuid>1abc0bc0-600e-4887-8132-4cfeea5eb99e</md:uuid>
+</metadata>
+
+<content>
+  <section id="eip-361"><para id="eip-570"><title>Introduction</title>The process of speech recognition comes naturally to humans since the ear acts as an auditory system, giving us the gift of sound. The ear converts the mechanical vibration signal of sound into electric signals that the brain can identify. However, computers cannot translate signals naturally like the human ear so we have to come up with creative methods to determine what was said. Speech recognition is complex, but we can simplify it if we only focus on recognizing vowels. Consonants generally have erratic frequency responses, but vowels are special in that their frequency responses have several well defined peaks which are called formants. Long story short, if we can figure out the formants of a vowel, we can figure out the vowel.Insert paragraph text here.
+</para><para id="eip-264"><title>Motivation</title>Many big name companies like Microsoft, Apple, and Google are creating speech recognition programs. We decided that we wanted to make something useful and relevant to the outside world and build an interactive software. This way our project has more functionality and the user is not restricted when interfacing with the program. Building smooth communication between humans and computers has been a focus of engineering in the 21st century and we wanted to do our part in this incredible, ongoing effort. </para><para id="eip-826"><title>Objective</title>Our team aims to take a small aspect of speech recognition, developing a vowel recognition algorithm and test its accuracy. Our initial objective is to use the Fourier Transform to extract an input vowel signal and have the output identify the vowel. Once that proved mostly successful, we moved on to a harder task: recognizing vowels at arbitrary spacing with arbitrary length. Namely, we challenged ourselves to find a way to interpret the vowels in an stream of speech.</para></section></content>
+
+</document>

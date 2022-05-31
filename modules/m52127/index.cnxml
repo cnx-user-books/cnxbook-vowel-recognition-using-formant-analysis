@@ -1,0 +1,14 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Contributions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m52127</md:content-id>
+  <md:title>Contributions</md:title>
+  <md:abstract/>
+  <md:uuid>bd5d40b9-0029-4ab8-baec-7fe2c083ed6c</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me">Sujay: Developed and implemented the algorithm to recognize vowels in a continuous-stream in MATLAB. Wrote about the thought process, coding and data analysis.</para><para id="eip-964">Mauro: Researched and implemented the autoregressive model in MATLAB. Wrote about the probabilistic model.</para><para id="eip-150">Steven: Researched and implemented functions in MATLAB that were useful for data gathering and analysis. Wrote about the vocal tract system, limitations, and theory of formants.</para></content>
+
+</document>
